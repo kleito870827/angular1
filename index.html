@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ng-quore</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+     <link rel="stylesheet" src='style.css'>
+  </head>
+  <body ng-app='QuoteOfDaDay'>
+    <div class="row">
+      <div class="col m3"></div>
+      <div class="col s12 m6" ng-controller='QuoteController'>
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">{{quote.quote}}</span>
+            <br><br>
+            <p class='card-title'>{{quote.topic}}</p>
+            <br><br>
+            <p class='card-title'>{{quote.author}} &nbsp; {{quote.timeStamp}}</p>
+          </div>
+
+        </div>
+        <button ng-click='handleClick()' class="btn waves-effect waves-light" type="submit" name="action">Submit
+         <i class="material-icons right">send</i>
+       </button>
+      </div>
+    </div>
+    <script src='app.js'></script>
+  </body>
+</html>
